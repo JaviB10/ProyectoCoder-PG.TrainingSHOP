@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.colorNegro {
+  color: black;
+}
+.colorBlanco {
+  color: #fff;
+}
+.colorAmarillo {
+  color: yellow;
+}
+
+.bannerFooter {
+  background-image: url(../public/images/banner-footer.jpg);
+}
+
+/** Se le modifica el color al sub-menu y se le aplica un color a las letras dentro del mismo */
+.dropdown-menu {
+  background-color: #000;
+}
+.dropdown-menu li a {
+  color: #fff;
+}
+
+/** Efectos neo al posicionarse sobre el submenu de Actividades */
+.dropdown-menu li:hover a {
+  background: blue;
+  box-shadow: 0 0 1px blue, 0 0 6px blue, 0 0 12px blue;
+  color: white;
+}
+
