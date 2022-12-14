@@ -11,11 +11,11 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
+
     <div className='container-fluid'>
+
       <BrowserRouter>
-       
-          <NavBar />
-        
+        <NavBar />
         <Routes>
           <Route path={"/"} element={<ItemListContainer />}/>
           <Route path={"/category/:id"} element={<ItemListContainer />}/>
@@ -23,11 +23,9 @@ function App() {
           <Route path={"*"} element={<Error404 />}/>
         </Routes>
         <PromocionApp />
-        
-          <Footer />
-        
-        
+        <Footer />
       </BrowserRouter>
+      
     </div>
   );
 }

@@ -31,21 +31,18 @@ const ItemCount = ({stockItems}) => {
     }
 
     return (
-        <div className="container d-flex justify-content-center">
-            <div className="row mb-3">
-                <div className="col-md-12">
-                    <div className="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" className="btn btn-primary" onClick={decrementarStock}> - </button>
-                        <button className="btn btn-primary"> {counter} </button>
-                        <button type="button" className="btn btn-primary" onClick={incrementarStock}> + </button>
-                    </div>
-                </div>
+
+        <div className="d-flex justify-content-center">
+
+            <div className="btn-group" role="group" aria-label="Basic example">
+
+                <button type="button" className="btn btn-dark" onClick={decrementarStock}> - </button>
+                <button className="btn btn-dark"> {counter} </button>
+                <button type="button" className="btn btn-dark" onClick={incrementarStock}> + </button>
+
             </div>
-            <div className="row">
-                <div className="col-md-12">
-                    <button className="btn btn-outline-primary" onClick={onAdd}> Agregar al carrito </button>
-                </div>
-            </div>
+            <button className="btn btn-outline-dark" onClick={onAdd}> Agregar al carrito </button>
+        
         </div>
     )
 }

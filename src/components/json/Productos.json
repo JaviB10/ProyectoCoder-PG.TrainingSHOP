@@ -6,7 +6,7 @@
         "stock": 5,
         "categoria": "proteinas",
         "descripcion": "Suplemento en polvo ENA Sport True Made Proteina, sabor cookies & cream, 930g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_786807-MLA50144914161_052022-V.webp"
+        "imagen": "/images/proteinas/ena-true-made-whey-protein.png"
     },
     {
         "id":2,
@@ -15,7 +15,7 @@
         "stock": 10,
         "categoria": "proteinas",
         "descripcion": "Suplemento en polvo Xtrenght Nutrition Advance Proteina, sabor chocolate, 907g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_631893-MLA49975469429_052022-V.webp"
+        "imagen": "/images/proteinas/xtrenght-nutrition-advance-whey-protein.png"
     },
     {
         "id":3,
@@ -24,7 +24,7 @@
         "stock": 10,
         "categoria": "proteinas",
         "descripcion": "Suplemento en polvo GOLD Nutrition Proteina, sabor gourmet milk chocolate, 907g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_854859-MLA47684733175_092021-V.webp"
+        "imagen": "/images/proteinas/gold-nutrition-iso-gold-protein.png"
     },
     {
         "id":4,
@@ -33,7 +33,7 @@
         "stock": 10,
         "categoria": "proteinas",
         "descripcion": "Suplemento en polvo STAR Nutrition Platinium Proteina, sabor chocolate suizo, 907g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_782490-MLA48946238232_012022-V.webp"
+        "imagen": "/images/proteinas/star-nutrition-platinium-whey-protein.png"
     },
     {
         "id":5,
@@ -42,7 +42,7 @@
         "stock": 10,
         "categoria": "creatinas",
         "descripcion": "Suplemento en polvo Xtrenght Nutrition Premium Creatina, sin sabor, 300g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_621628-MLA43911658744_102020-V.webp"
+        "imagen": "/images/creatinas/xtrenght-nutrition-premium-creatina.png"
     },
     {
         "id":6,
@@ -51,7 +51,7 @@
         "stock": 10,
         "categoria": "creatinas",
         "descripcion": "Suplemento en polvo Nutrilab Creatina, sabor uva, 300g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_808965-MLA49277794850_032022-V.webp"
+        "imagen": "/images/creatinas/nutrilab-crea-shock-creatina.png"
     },
     {
         "id":7,
@@ -60,7 +60,7 @@
         "stock": 10,
         "categoria": "creatinas",
         "descripcion": "Suplemento en polvo ENA Sport Creatina, sabor fruit punch, 300g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_804884-MLA52388749857_112022-V.webp"
+        "imagen": "/images/creatinas/ena-sport-creatina-micronizada.png"
     },
     {
         "id":8,
@@ -69,6 +69,6 @@
         "stock": 10,
         "categoria": "creatinas",
         "descripcion": "Suplemento en polvo STAR Nutrition Creatina, sin sabor, 300g",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_992202-MLA46595776122_072021-V.webp"
+        "imagen": "/images/creatinas/star-nutrition-creatina.png"
     }
 ]

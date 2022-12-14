@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <header>
             
-            <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
 
                 <div className="container-fluid">
 
@@ -24,7 +24,7 @@ const NavBar = () => {
 
                             <li className="nav-item active">
 
-                                <NavLink className="nav-link fw-bolder colorNegro decoracionText" to={"/"}>
+                                <NavLink className="nav-link fw-bolder text-light" to={"/"}>
 
                                     INICIO
 
@@ -33,22 +33,22 @@ const NavBar = () => {
                             </li>
                             <li className="nav-item dropdown">
 
-                                <NavLink className="nav-link dropdown-toggle fw-bolder colorNegro" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                                                
+                                <NavLink className="nav-link dropdown-toggle fw-bolder text-light" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+
                                     CATEGORIAS
 
                                 </NavLink>
-                                <ul className="dropdown-menu">
+                                <ul className="dropdown-menu text-center">
 
-                                    <li><NavLink className="dropdown-item fw-bolder " to={"/category/proteinas"}>PROTEINAS</NavLink></li>
-                                    <li><NavLink className="dropdown-item fw-bolder" to={"/category/creatinas"}>CREATINAS</NavLink></li>
-                                                
+                                    <li><Link className="dropdown-item fw-bolder" to={"/category/proteinas"}>PROTEINAS</Link></li>
+                                    <li><Link className="dropdown-item fw-bolder" to={"/category/creatinas"}>CREATINAS</Link></li>
+
                                 </ul>
 
                             </li>
                             <li className="nav-item">
 
-                                <NavLink className="nav-link fw-bolder colorNegro decoracionText" to={"/"}>
+                                <NavLink className="nav-link fw-bolder text-light" to={"/"}>
 
                                     CONTACTO
 
@@ -60,13 +60,13 @@ const NavBar = () => {
 
                     </div>
                     <div className="">
-                                
+
                         <CartWidget />
 
                     </div> 
 
                 </div> 
-                            
+
             </nav>
 
         </header>
