@@ -1,87 +1,75 @@
 import React from "react";
+import {Link, NavLink} from "react-router-dom"
 import CartWidget from "./CartWidget";
 
 
 const NavBar = () => {
     return (
-        <div className="row">
+        <header>
+            
+            <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
 
-            <div className="col-md-6">
+                <div className="container-fluid">
 
-                <nav className="navbar navbar-expand-md">
+                    <Link className="navbar-brand" to={"/"}><img src={"/images/logo-pgtraining.png"} alt={"Logo PG TRAINING"}/></Link>
+                    <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
-                    <div className="container-fluid">
+                        <span className="navbar-toggler-icon"></span>
 
-                        <a className="navbar-brand" href={"./index.html"}><img src={"./images/logo-pgtraining.png"} alt={"Logo PG TRAINING"}/></a>
-                        <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    </button>
 
-                            <span className="navbar-toggler-icon"></span>
+                    <div className="collapse navbar-collapse" id="navbarResponsive">
 
-                        </button>
+                        <ul className="navbar-nav">
 
-                        <div className="collapse navbar-collapse" id="navbarResponsive">
+                            <li className="nav-item active">
 
-                            <ul className="navbar-nav">
+                                <NavLink className="nav-link fw-bolder colorNegro decoracionText" to={"/"}>
 
-                                <li className="nav-item active">
+                                    INICIO
 
-                                    <a className="nav-link fw-bolder colorNegro" href={"./index.html"}>
+                                </NavLink>
 
-                                        INICIO
+                            </li>
+                            <li className="nav-item dropdown">
 
-                                    </a>
+                                <NavLink className="nav-link dropdown-toggle fw-bolder colorNegro" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                                
+                                    CATEGORIAS
 
-                                </li>
-                                <li className="nav-item dropdown">
+                                </NavLink>
+                                <ul className="dropdown-menu">
 
-                                    <a className="nav-link dropdown-toggle fw-bolder colorNegro" data-bs-toggle="dropdown" href={"./index.html"} role="button" aria-expanded="false">
-                                        
-                                        CATEGORIAS
+                                    <li><NavLink className="dropdown-item fw-bolder " to={"/category/proteinas"}>PROTEINAS</NavLink></li>
+                                    <li><NavLink className="dropdown-item fw-bolder" to={"/category/creatinas"}>CREATINAS</NavLink></li>
+                                                
+                                </ul>
 
-                                    </a>
-                                    <ul className="dropdown-menu">
+                            </li>
+                            <li className="nav-item">
 
-                                        <li><a className="dropdown-item fw-bolder" href={"#act1"}>MUSCULACIÓN</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act2"}>CARDIO</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act3"}>PESO LIBRE</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act4"}>ESTRUCTURAS DE FUERZA</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act5"}>BOXEO</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act6"}>YOGA Y PILATES</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act7"}>BANCOS</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act8"}>ACCESORIOS</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act9"}>MULTIESTACIONES</a></li>
-                                        <li><a className="dropdown-item fw-bolder" href={"#act10"}>INDUMENTARIA</a></li>
+                                <NavLink className="nav-link fw-bolder colorNegro decoracionText" to={"/"}>
 
-                                    </ul>
+                                    CONTACTO
 
-                                </li>
-                                <li className="nav-item">
+                                </NavLink>
 
-                                    <a className="nav-link fw-bolder colorNegro" href={"./index.html"}>
+                            </li>
 
+                        </ul>
 
-                                        CONTACTO
+                    </div>
+                    <div className="">
+                                
+                        <CartWidget />
 
-                                    </a>
+                    </div> 
 
-                                </li>
+                </div> 
+                            
+            </nav>
 
-                            </ul>
-
-                        </div>
-
-                    </div>  
-
-                </nav>
-                
-            </div>
-            <div className="col-md-6 d-flex justify-content-end align-items-center">
-                
-                <CartWidget />
-
-            </div>
-
-        </div>
+        </header>
     );
 }
 

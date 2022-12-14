@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -9,11 +10,11 @@ const Footer = () => {
 
                 <div className="col-12 col-md-3">
 
-                    <a className="link-dark text-decoration-none" href={"../index.html"}>
+                    <NavLink className="link-dark text-decoration-none" to={"/"}>
 
-                        <img className="img-fluid mt-5" src={"../images/logo-pgtraining2.png"} alt={"Logo PG TRAINING"} />
+                        <img className="img-fluid mt-5" src={"/images/logo-pgtraining2.png"} alt={"Logo PG TRAINING"} />
 
-                    </a>
+                    </NavLink>
                     
                 </div>
                 <article className="col-12 col-md-3 text-center text-md-start colorBlanco">

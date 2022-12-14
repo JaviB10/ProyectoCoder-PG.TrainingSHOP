@@ -1,8 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
+/** Fuentes para las letras */
+h1 {
+  font-family: "Graduate", "cursive";
+}
 
+h2 {
+  font-family: "Graduate", "cursive";
+}
+
+h3 {
+  font-family: "Graduate", "cursive";
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+.colorNav{
+  background-color: black;
+  width: 100vw;
+  height: 150px;
+}
 
 .colorNegro {
   color: black;
@@ -14,22 +36,28 @@
   color: yellow;
 }
 
-.bannerFooter {
-  background-image: url(../public/images/banner-footer.jpg);
+header, a {
+  font-family: "Graduate", "cursive";
 }
 
 /** Se le modifica el color al sub-menu y se le aplica un color a las letras dentro del mismo */
-.dropdown-menu {
-  background-color: #000;
-}
-.dropdown-menu li a {
-  color: #fff;
-}
+
 
 /** Efectos neo al posicionarse sobre el submenu de Actividades */
 .dropdown-menu li:hover a {
   background: blue;
   box-shadow: 0 0 1px blue, 0 0 6px blue, 0 0 12px blue;
   color: white;
+  outline: none;
 }
 
+.bannerFooter {
+  background-image: url(/public/images/banner-footer.jpg);
+  position: relative;
+  top: 150px;
+}
+
+main{
+  position: relative;
+  top: 150px;
+}
