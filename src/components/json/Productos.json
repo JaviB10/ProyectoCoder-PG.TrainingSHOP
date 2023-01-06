@@ -1,6 +1,6 @@
 [
     {
-        "id":1,
+        "index":1,
         "nombre": "ENA Sport True Made - WHEY PROTEIN",
         "precio": 7000,
         "stock": 5,
@@ -9,7 +9,7 @@
         "imagen": "/images/proteinas/ena-true-made-whey-protein.png"
     },
     {
-        "id":2,
+        "index":2,
         "nombre": "Xtrenght Nutrition Advance - WHEY PROTEIN",
         "precio": 8000,
         "stock": 10,
@@ -18,7 +18,7 @@
         "imagen": "/images/proteinas/xtrenght-nutrition-advance-whey-protein.png"
     },
     {
-        "id":3,
+        "index":3,
         "nombre": "GOLD Nutrition - ISO GOLD PROTEIN",
         "precio": 5000,
         "stock": 10,
@@ -27,7 +27,7 @@
         "imagen": "/images/proteinas/gold-nutrition-iso-gold-protein.png"
     },
     {
-        "id":4,
+        "index":4,
         "nombre": "STAR Nutrition Platinium - WHEY PROTEIN",
         "precio": 5500,
         "stock": 10,
@@ -36,8 +36,8 @@
         "imagen": "/images/proteinas/star-nutrition-platinium-whey-protein.png"
     },
     {
-        "id":5,
-        "nombre": "Xtrenght Nutrition Premium - CREATINA MONOHIDRATADA Micronizada",
+        "index":5,
+        "nombre": "Xtrenght Nutrition Premium - CREATINA MONOHindexRATADA Micronizada",
         "precio": 3000,
         "stock": 10,
         "categoria": "creatinas",
@@ -45,7 +45,7 @@
         "imagen": "/images/creatinas/xtrenght-nutrition-premium-creatina.png"
     },
     {
-        "id":6,
+        "index":6,
         "nombre": "Nutrilab - CREA SHOCK Creatina",
         "precio": 3000,
         "stock": 10,
@@ -54,7 +54,7 @@
         "imagen": "/images/creatinas/nutrilab-crea-shock-creatina.png"
     },
     {
-        "id":7,
+        "index":7,
         "nombre": "ENA Sport - CREATINA Micronizada",
         "precio": 8000,
         "stock": 10,
@@ -63,8 +63,8 @@
         "imagen": "/images/creatinas/ena-sport-creatina-micronizada.png"
     },
     {
-        "id":8,
-        "nombre": "STAR Nutrition - CREATINA MONOHIDRATADA UltraMicronizada",
+        "index":8,
+        "nombre": "STAR Nutrition - CREATINA MONOHindexRATADA UltraMicronizada",
         "precio": 10000,
         "stock": 10,
         "categoria": "creatinas",

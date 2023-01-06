@@ -84,3 +84,18 @@ header, a {
   position: relative;
   top: 500px;
 }
+
+.backgroundForm {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  width: 75%;
+  height: none;
+}
+
+.backgroundCart {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  width: 100%;
+  height: none;
+}
