@@ -1,5 +1,6 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React, { useContext, useState } from "react";
+import { Navigate } from "react-router-dom";
 import { CartContext } from "./context/CartContext";
 
 const Checkout = () => {
@@ -31,31 +32,31 @@ const Checkout = () => {
 
 
     return(
-        <div className="container disposicionItemDetail">
-            <div className="row">
-                <div className="col">
-                    <form className="backgroundForm p-5">
-                        <div className="form-floating mb-3">
+        <div className="container d-flex justify-content-center mt-5 mb-5">
+            <div className="row d-flex justify-content-around flex-md-row flex-column-reverse backgroundForm">
+                <div className="col-md-4">
+                    <form>
+                        <div className="form-floating mt-5 mb-4">
                             <input className="form-control" id="nombre" type="text" placeholder="Nombre" onInput={(e) => {setNombre(e.target.value)}}/>
                             <label htmlFor="nombre">Nombre</label>
                         </div>
-                        <div className="form-floating mb-3">
+                        <div className="form-floating mb-4">
                             <input className="form-control" id="apellido" type="text" placeholder="Apellido" onInput={(e) => {setApellido(e.target.value)}}/>
                             <label htmlFor="apellido">Apellido</label>
                         </div>
-                        <div className="form-floating mb-3">
+                        <div className="form-floating mb-4">
                             <input className="form-control" id="email" type="email" placeholder="name@example.com" onInput={(e) => {setEmail(e.target.value)}}/>
                             <label htmlFor="email">Email</label>
                         </div>
-                        <div className="form-floating mb-3">
+                        <div className="form-floating mb-5">
                             <input className="form-control" id="telefono" type="tel" placeholder="Telefono" onInput={(e) => {setTelefono(e.target.value)}}/>
                             <label htmlFor="telefono">Teléfono</label>
                         </div>
-                        <button type="button" className="btn btn-primary" onClick={generarOrden}>Generar Orden</button>
+                        <button type="button" className="btn btn-primary fw-bold mb-5" onClick={generarOrden}>Generar Orden</button>
                     </form>
                 </div>
-                <div className="col ms-5">
-                    <table className="table text-center colorBlanco">
+                <div className="col-md-6 table-responsive">
+                    <table className="table text-center text-light mt-5 mb-2">
                         <tbody>
                             {cart.map(item => (
                                 <tr key={item.id}>
@@ -65,7 +66,7 @@ const Checkout = () => {
                                     <td className="align-middle">${item.quantity * item.precio}</td>
                                 </tr>
                             ))}
-                            <tr className="text-center">
+                            <tr className="text-center fw-bold">
                                 <td colSpan={2}>&nbsp;</td>
                                 <td><b>TOTAL</b></td>
                                 <td><b>${sumTotal()}</b></td>
@@ -76,11 +77,7 @@ const Checkout = () => {
             </div>
             <div className="row my-5">
                 <div className="col">
-                    {orderId ? <div className="alert alert-success text-center" role="alert">
-                            <h2>FELICITACIONES</h2>
-                            <p>Su orden se genero con exito!</p>
-                            <p>Numero de orden: {orderId}</p>
-                    </div> : ""}
+                    {orderId ? <Navigate to={"/ending/" + orderId}/> : ""}
                 </div>
             </div>
         </div>

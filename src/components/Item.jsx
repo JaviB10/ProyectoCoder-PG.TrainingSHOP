@@ -4,26 +4,16 @@ import { Link } from "react-router-dom";
 const Item = ({item}) => {
     return (
         
-        <Link to={"/item/" + item.id} className="text-decoration-none text-black">
-
-            <div className="col-12 my-5 bgExterno">
-
-                <div className="column">
-
-                    <div className="col-12 pt-5 d-flex justify-content-center imagenesAlto"> 
-                                    
-                        <img className="img-fluid" src={item.imagen} alt={item.nombre}/>
-                                    
-                    </div>
-                    <div className="col-12 m-0 p-0 d-flex align-items-center">
-
-                        <p className="text-center text-light p-5">{item.nombre}</p>
-
-                    </div>
-
+        <Link to={"/item/" + item.id} className="text-decoration-none">
+                <div className="card text-light efecto border-dark">
+                    <img src={item.imagen} className="card-img-top" alt={item.nombre}/>
+                        <div className="card-body text-center bgNombre rounded-bottom">
+                            <p className="card-text">{item.nombre}</p>
+                        </div>
                 </div>
+                
 
-            </div>
+            
 
         </Link>
     )

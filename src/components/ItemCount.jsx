@@ -37,21 +37,28 @@ const ItemCount = ({stockItems, onAdd}) => {
     }
     
     return (
+   
+        <div className="row d-flex justify-content-center">
+            <div>
+                <div className="btn-group" role="group" aria-label="Basic outlined example">
 
-        <div className="d-flex justify-content-center">
+                    <button type="button" className="btn bgNegro fw-bold" onClick={decrementarStock}> - </button>
+                    <button className="btn bgNegro fw-bold"> {counter} </button>
+                    <button type="button" className="btn bgNegro fw-bold" onClick={incrementarStock}> + </button>
 
-            <div className="btn-group pe-2" role="group" aria-label="Basic example">
-
-                <button type="button" className="btn btn-dark" onClick={decrementarStock}> - </button>
-                <button className="btn btn-dark"> {counter} </button>
-                <button type="button" className="btn btn-dark" onClick={incrementarStock}> + </button>
-
+                </div>
             </div>
-
-            {vendido ? <Link to={"/cart"} className="btn btn-dark">Finalizar Compra</Link> : <button className="btn btn-dark" onClick={() => {addToCart(counter)}}> Agregar al carrito </button>}
-        
+            
+            <div className="row d-flex justify-content-center mt-3">
+                
+                <div>
+                    {vendido ? <Link to={"/cart"} className="btn bgNegro fw-bold">Finalizar Compra</Link> : <button className="btn bgNegro fw-bold" onClick={() => {addToCart(counter)}}> Agregar al carrito </button>}
+                </div>
+            
+            </div>
         </div>
+        
     )
-}
+}   
 
 export default ItemCount

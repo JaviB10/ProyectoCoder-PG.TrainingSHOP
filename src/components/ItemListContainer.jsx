@@ -2,11 +2,13 @@ import { getFirestore, collection, getDocs, where, query } from "firebase/firest
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
+import Loading from "./Loading";
 
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {id} = useParams();
+    const [loading, setLoading] = useState(true);
 
     /*
     useEffect(() => {
@@ -35,14 +37,15 @@ const ItemListContainer = () => {
         const itemsCollection = collection (db, "items")
         const q = (id ? query(itemsCollection, where("categoria","==",id)) : itemsCollection)
         getDocs(q).then((snapShot) => {
-            setItems(snapShot.docs.map((doc) => 
-                ({id:doc.id, ...doc.data()})
-            ))
-        })
+            setItems(snapShot.docs.map((doc) => ({id:doc.id, ...doc.data()})));
+            setLoading(false);
+        });
     }, [id])
 
     return (
-        <ItemList items={items} />
+        <div>
+            {loading ? <Loading /> : <ItemList items={items} />}        
+        </div>
     )
 }
 

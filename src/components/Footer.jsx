@@ -8,7 +8,7 @@ const Footer = () => {
 
             <div className="row d-flex align-items-center bannerFooter"> 
 
-                <div className="col-12 col-md-3">
+                <div className="col-12 col-md-3 d-flex justify-content-center">
 
                     <NavLink className="link-dark text-decoration-none" to={"/"}>
 
