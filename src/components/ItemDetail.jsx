@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
 
     return (
         <div className="mt-5 pt-5 text-center">
-            <img src={item.imagen} className="img-fluid rounded-3" alt={item.nombre} />
+            <img className="img-fluid rounded-3" src={item.imagen} alt={item.nombre} />
             <h1 className="pt-5 text-uppercase fw-bold">{item.nombre}</h1>
             <p className="pt-3">{item.descripcion}</p>
             <p className="pt-3 fw-bold"><b>${item.precio}</b></p>

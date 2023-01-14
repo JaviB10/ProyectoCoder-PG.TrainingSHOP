@@ -30,7 +30,6 @@ const Checkout = () => {
 
     }
 
-
     return(
         <div className="container d-flex justify-content-center mt-5 mb-5">
             <div className="row d-flex justify-content-around flex-md-row flex-column-reverse backgroundForm">

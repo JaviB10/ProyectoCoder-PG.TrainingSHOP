@@ -52,7 +52,7 @@ const Contacto = () =>{
                         </form>
                     </div>
                     <div className="col-md-6 d-flex align-items-end justify-content-center">
-                        <img src="/images/imagenContacto.png" alt="foto botella de gin" className="w-100" />
+                        <img src={"/images/imagenContacto.png"} alt={"Foto para Contacto"} className="w-100" />
                     </div>
                 </div>
                 {contacto ? <Navigate to="/success" /> : ""}

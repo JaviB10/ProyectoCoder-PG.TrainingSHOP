@@ -40,34 +40,15 @@ header, a {
   color: #fff;
 }
 
-
-
-
-
-.bannerDetail {
-  background-color: rgb(0, 0, 0,0.8);
-  width: 100%;
-  border-radius: 10px;
-}
-
 .bgNombre {
   background-color: #000;
   height: 100px;
 }
+
 .efecto:hover{
   transform: scale(1.03);
   transition: 0.65s;
   box-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 15px #fff;
-}
-.disposicionError {
-  position: relative;
-  top: 300px;
-  height: 50vh;
-}
-
-
-.bannerFooter {
-  background-color: black;
 }
 
 .backgroundForm {
@@ -76,13 +57,11 @@ header, a {
   border-radius: 10px;
 }
 
-
-
 .encabezado{
   min-width: 90vw;
 }
+
 @media only screen and (max-width: 599px) {
-  
   .bgNombre {
     height: auto;
   }
@@ -92,6 +71,7 @@ header, a {
   background-color: #000;
   color:#fff;
 }
+
 .bgNegro:hover {
   background-color: #fff;
   color: #000;
@@ -101,7 +81,6 @@ header, a {
   background-image: url(/public/images/bannerPublicidad.png);
   background-size: cover;
   background-position: center;
-
 }
 
 .bgContacto {
@@ -109,6 +88,7 @@ header, a {
   background-size: cover;
   background-position: center;
 }
+
 .mensaje {
   height: 100px;
 }

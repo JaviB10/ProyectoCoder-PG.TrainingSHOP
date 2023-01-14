@@ -23,7 +23,7 @@ const ScrollTo = () => {
 
     return(
         <div>
-            {showScrollTopButton && <Link onClick={scrollTop}><img className="m-2 position-fixed bottom-0 start-0 translate-middle-y" src={"images/scrollUp.svg"} alt="Boton Scroll" /></Link>}
+            {showScrollTopButton && <Link onClick={scrollTop}><img className="m-2 position-fixed bottom-0 start-0 translate-middle-y" src={"/images/scrollUp.svg"} alt={"Boton Scroll"} /></Link>}
         </div>
         
     )

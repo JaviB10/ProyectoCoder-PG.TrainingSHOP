@@ -33,9 +33,9 @@ const ItemCount = ({stockItems, onAdd}) => {
         <div className="row d-flex justify-content-center">
             <div>
                 <div className="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button" className="btn bgNegro fw-bold" onClick={decrementarStock}> - </button>
+                    <button className="btn bgNegro fw-bold" type="button" onClick={decrementarStock}> - </button>
                     <button className="btn bgNegro fw-bold"> {counter} </button>
-                    <button type="button" className="btn bgNegro fw-bold" onClick={incrementarStock}> + </button>
+                    <button className="btn bgNegro fw-bold" type="button" onClick={incrementarStock}> + </button>
                 </div>
             </div>
             <div className="row d-flex justify-content-center mt-3">
