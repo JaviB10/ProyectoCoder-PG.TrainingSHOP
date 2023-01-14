@@ -10,19 +10,6 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
     const [loading, setLoading] = useState(true);
 
-    /*
-    useEffect(() => {
-        const promesa = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(Productos.find(item => item.id === parseInt(id)));
-            }, 2000)
-        })
-
-        promesa.then((data) => {
-            setItem(data);
-        })
-    }, [id])*/
-
     useEffect (() => {
         const db = getFirestore();
         const producto = doc(db, "items", id)
@@ -35,7 +22,6 @@ const ItemDetailContainer = () => {
             }
         })
     },[id])
-
 
     return (
         <div>

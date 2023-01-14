@@ -14,26 +14,21 @@ body {
 h1 {
   font-family: "Graduate", "cursive";
 }
-
 th{
   font-family: "Graduate", "cursive";
 }
 td{
   font-family: "Montserrat", sans-serif;
 }
-
 h2 {
   font-family: "Graduate", "cursive";
 }
-
 h3 {
   font-family: "Graduate", "cursive";
 }
-
 p {
   font-family: "Montserrat", sans-serif;
 }
-
 header, a {
   font-family: "Graduate", "cursive";
 }
@@ -44,23 +39,10 @@ header, a {
 .colorBlanco {
   color: #fff;
 }
-.colorAmarillo {
-  color: yellow;
-}
 
-/** Se le modifica el color al sub-menu y se le aplica un color a las letras dentro del mismo */
-.dropdown-menu {
-  background-color: #000;
-}
-.dropdown-menu li a {
-  color: #fff;
-}
-/** Efectos neo al posicionarse sobre el submenu de Actividades */
-.dropdown-menu li:hover a {
-  background: blue;
-  box-shadow: 0 0 1px blue, 0 0 6px blue, 0 0 12px blue;
-  color: white;
-}
+
+
+
 
 .bannerDetail {
   background-color: rgb(0, 0, 0,0.8);
@@ -94,35 +76,89 @@ header, a {
   border-radius: 10px;
 }
 
-.backgroundCart {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 1rem;
-  width: 100%;
-  height: none;
-}
-.altoHeader{
-  height: 20vh;
-}
+
+
 .encabezado{
   min-width: 90vw;
 }
 @media only screen and (max-width: 599px) {
-  .bgExterno {
-    height: auto;
-  }
+  
   .bgNombre {
     height: auto;
   }
 }
-.bannerHeader {
-  background-color: #000;
-  width: 100vw;
-}
+
 .bgNegro {
   background-color: #000;
   color:#fff;
 }
 .bgNegro:hover {
   background-color: #fff;
+  color: #000;
+}
+
+.seccionPublicidad {
+  background-image: url(/public/images/bannerPublicidad.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.bgContacto {
+  background-image: url(/public/images/bannerContacto.png);
+  background-size: cover;
+  background-position: center;
+}
+.mensaje {
+  height: 100px;
+}
+
+
+
+
+
+.redesSociales a {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 2rem;
+  margin: 1rem;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+.redesSociales:hover a:hover i {
+  transition: all 0.65s;
+  transform: rotateY(360deg);
+}
+.instagram:hover {
+  background-color: rgb(255, 11, 182);
+  transform: translateY(-4.8px) scale(1.05);
+  color: #000;
+}
+
+.redesSociales:hover a:hover i {
+  transition: all 0.65s;
+  transform: rotateY(360deg);
+}
+.facebook:hover {
+  background-color: rgba(8, 63, 243);
+  transform: translateY(-4.8px) scale(1.05);
+  color: #000;
+}
+
+.redesSociales:hover a:hover i {
+  transition: all 0.65s;
+  transform: rotateY(360deg);
+}
+.whatsapp:hover {
+  background-color: rgba(34, 119, 0);
+  transform: translateY(-4.8px) scale(1.05);
   color: #000;
 }

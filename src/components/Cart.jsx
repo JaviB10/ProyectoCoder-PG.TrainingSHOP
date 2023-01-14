@@ -7,10 +7,10 @@ const Cart = () => {
 
     if (cartTotal() === 0) {
         return(
-            <div className="container text-center mt-5 pt-5 mb-5 pb-5">
+            <div className="container text-center my-5 py-5">
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="p-5 colorNegro text-uppercase">no hay productos en el carrito</h1>
+                        <h1 className="p-5 colorNegro text-uppercase">el carrito de compra se encuentra vacio</h1>
                         <Link to={"/"} className="btn bgNegro fw-bold m-5">Volver al Inicio</Link>
                     </div>
                 </div>
@@ -53,19 +53,12 @@ const Cart = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        
                     </div>
-                    
                 </div>
-                
-                    
                     <div className="text-center text-md-end mt-2 mb-5">
                         <Link to={"/checkout"} className="btn bgNegro fw-bold">Finalizar Compra</Link>
                     </div>                        
-                
-                
             </div>
-            
         </div>
     )
 }

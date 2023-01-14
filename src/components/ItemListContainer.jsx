@@ -1,36 +1,15 @@
-import { getFirestore, collection, getDocs, where, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { getFirestore, collection, getDocs, where, query } from "firebase/firestore";
 import ItemList from "./ItemList";
 import Loading from "./Loading";
+import Publicidad from "./Publicidad";
 
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {id} = useParams();
     const [loading, setLoading] = useState(true);
-
-    /*
-    useEffect(() => {
-        const promesa = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(id ? Productos.filter(item => item.categoria === id): Productos);
-            }, 2000)
-        })
-        promesa.then((data) => {
-            setItems(data);
-        })
-    }, [id])*/
-
-    /*
-    useEffect (() => {
-        const db = getFirestore();
-        const itemsCollection = collection(db, "items");
-
-        Productos.forEach((item) => {
-            addDoc(itemsCollection, item);
-        });
-    }, []);*/
 
     useEffect(() => {
         const db = getFirestore();
@@ -44,7 +23,8 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            {loading ? <Loading /> : <ItemList items={items} />}        
+            {loading ? <Loading /> : <ItemList items={items} />}
+            <Publicidad />   
         </div>
     )
 }

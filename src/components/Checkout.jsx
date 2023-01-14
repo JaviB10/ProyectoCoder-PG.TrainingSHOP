@@ -52,7 +52,7 @@ const Checkout = () => {
                             <input className="form-control" id="telefono" type="tel" placeholder="Telefono" onInput={(e) => {setTelefono(e.target.value)}}/>
                             <label htmlFor="telefono">Teléfono</label>
                         </div>
-                        <button type="button" className="btn btn-primary fw-bold mb-5" onClick={generarOrden}>Generar Orden</button>
+                        <button type="button" className="btn btn-primary btn-outline-light fw-bold mb-5" onClick={generarOrden}>Generar Orden</button>
                     </form>
                 </div>
                 <div className="col-md-6 table-responsive">

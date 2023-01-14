@@ -12,67 +12,29 @@ const NavBar = () => {
                     <CartWidget/>
                 </div>
             </div>
-            
             <div className="d-flex justify-content-center text-center">
                 <nav className="navbar navbar-expand-lg navbar-dark">
                     <div className="container d-flex justify-content-center">
-
-
                         <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-
                             <span className="navbar-toggler-icon"></span>
-
                         </button>
-
                         <div className="collapse navbar-collapse" id="navbarResponsive">
-
                             <ul className="navbar-nav">
-
                                 <li className="nav-item active">
-
-                                    <NavLink className="nav-link fw-bolder text-light" to={"/"}>
-
-                                        INICIO
-
-                                    </NavLink>
-
-                                </li>
-                                <li className="nav-item dropdown">
-
-                                    <Link className="nav-link dropdown-toggle fw-bolder text-light" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-
-                                        CATEGORIAS
-
-                                    </Link>
-                                    <ul className="dropdown-menu text-center">
-
-                                        <li><Link className="dropdown-item fw-bolder" to={"/category/proteinas"}>PROTEINAS</Link></li>
-                                        <li><Link className="dropdown-item fw-bolder" to={"/category/creatinas"}>CREATINAS</Link></li>
-
-                                    </ul>
-
+                                    <NavLink className="nav-link fw-bolder text-light" to={"/"}>INICIO</NavLink>
                                 </li>
                                 <li className="nav-item">
-
-                                    <NavLink className="nav-link fw-bolder text-light" to={"/"}>
-
-                                        CONTACTO
-
-                                    </NavLink>
-
+                                    <NavLink className="nav-link fw-bolder text-light" to={"/category/proteinas"}>PROTEINAS</NavLink>
                                 </li>
-
+                                <li className="nav-item">
+                                    <NavLink className="nav-link fw-bolder text-light" to={"/category/creatinas"}>CREATINAS</NavLink>
+                                </li>
                             </ul>
-
                         </div>
                     </div>
-
                 </nav>
             </div>
         </div>
-
-
-        
     );
 }
 
