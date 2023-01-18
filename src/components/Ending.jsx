@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import {doc, getDoc, getFirestore} from "firebase/firestore"
+import { CartContext } from "./context/CartContext";
 
 const Ending = () => {
     const {id} =useParams();
     const [orden, setOrden] = useState({});  
     const [nombre, setNombre] = useState("");
     const [items, setItems] = useState([]);
-
+    const {clear} = useContext(CartContext);
+    clear();
     useEffect(()=>{
         const db = getFirestore()
         const documento = doc(db, "orders", id)
@@ -25,11 +27,11 @@ const Ending = () => {
     
     return(
         <div className="container my-5 d-flex flex-column align-items-center">
-            <div className="d-flex flex-column align-items-center p-4 text-black bg-light border rounded-4 tickets">
-                <h2 className="my-4 text-center"><b>Felicidades por tu pedido</b></h2>
+            <div className="d-flex flex-column align-items-center p-4 bg-black text-light rounded-4 tickets">
+                <h2 className="my-4 text-center"><b>felicidades por tu pedido</b></h2>
                 <div className="d-flex flex-md-row flex-column align-items-center">
-                    <img className="my-4" src={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+orden.id} alt="codigo qr" width={200}/>
-                    <div className="">
+                    <img className="m-4" src={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+orden.id} alt="codigo qr" width={200}/>
+                    <div>
                         <h5>Codigo: {orden.id}</h5>
                         <h5>Nombre: {nombre}</h5>
                         <h5>Fecha: {orden.date}</h5>

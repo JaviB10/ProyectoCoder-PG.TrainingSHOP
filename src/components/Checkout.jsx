@@ -1,11 +1,12 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React, { useContext, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { CartContext } from "./context/CartContext";
+
 
 const Checkout = () => {
 
-    const {cart, sumTotal, clear} = useContext(CartContext);
+    const {cart, sumTotal, cartTotal} = useContext(CartContext);
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [email, setEmail] = useState("");
@@ -25,9 +26,22 @@ const Checkout = () => {
         const ordersCollection = collection(db, "orders");
         addDoc(ordersCollection, order).then((snapShot) => {
             setOrderId(snapShot.id);
-            clear();
+            
         });
 
+    }
+
+    if (cartTotal() === 0) {
+        return(
+            <div className="container text-center my-5 py-5">
+                <div className="row">
+                    <div className="col-12">
+                        <h1 className="p-5 colorNegro text-uppercase">el carrito de compra se encuentra vacio</h1>
+                        <Link to={"/"} className="btn bgNegro fw-bold m-5">Volver al Inicio</Link>
+                    </div>
+                </div>
+            </div>
+        )
     }
 
     return(
@@ -36,19 +50,19 @@ const Checkout = () => {
                 <div className="col-md-4">
                     <form>
                         <div className="form-floating mt-5 mb-4">
-                            <input className="form-control" id="nombre" type="text" placeholder="Nombre" onInput={(e) => {setNombre(e.target.value)}}/>
+                            <input className="form-control" type="text" placeholder={"Nombre"} required onInput={(e) => {setNombre(e.target.value)}}/>
                             <label htmlFor="nombre">Nombre</label>
                         </div>
                         <div className="form-floating mb-4">
-                            <input className="form-control" id="apellido" type="text" placeholder="Apellido" onInput={(e) => {setApellido(e.target.value)}}/>
+                            <input className="form-control" type="text" placeholder="Apellido" required onInput={(e) => {setApellido(e.target.value)}}/>
                             <label htmlFor="apellido">Apellido</label>
                         </div>
                         <div className="form-floating mb-4">
-                            <input className="form-control" id="email" type="email" placeholder="name@example.com" onInput={(e) => {setEmail(e.target.value)}}/>
+                            <input className="form-control" type={"email"} id={"email"} name={"email"} placeholder={"name@example.com"} required onInput={(e) => {setEmail(e.target.value)}}/>
                             <label htmlFor="email">Email</label>
                         </div>
                         <div className="form-floating mb-5">
-                            <input className="form-control" id="telefono" type="tel" placeholder="Telefono" onInput={(e) => {setTelefono(e.target.value)}}/>
+                            <input className="form-control" type="tel" placeholder="Telefono" required onInput={(e) => {setTelefono(e.target.value)}}/>
                             <label htmlFor="telefono">Teléfono</label>
                         </div>
                         <button type="button" className="btn btn-primary btn-outline-light fw-bold mb-5" onClick={generarOrden}>Generar Orden</button>
@@ -74,12 +88,10 @@ const Checkout = () => {
                     </table>
                 </div>
             </div>
-            <div className="row my-5">
-                <div className="col">
-                    {orderId ? <Navigate to={"/ending/" + orderId}/> : ""}
-                </div>
-            </div>
+            {orderId ? <Navigate to={"/ending/" + orderId}/> : ""}
+            
         </div>
+        
     )
 }
 
