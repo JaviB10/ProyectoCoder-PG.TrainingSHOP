@@ -11,12 +11,12 @@ const ItemDetail = ({item}) => {
     }
 
     return (
-        <div className="mt-5 pt-5 text-center">
+        <div className="my-5 py-5 text-center">
             <img className="img-fluid rounded-3" src={item.imagen} alt={item.nombre} />
-            <h1 className="pt-5 text-uppercase fw-bold">{item.nombre}</h1>
-            <p className="pt-3">{item.descripcion}</p>
-            <p className="pt-3 fw-bold"><b>${item.precio}</b></p>
-            <div className="pt-5 pb-5 mb-5">
+            <h2 className="pt-5 text-uppercase fw-bold">{item.nombre}</h2>
+            <p className="py-3">{item.descripcion}</p>
+            <p className="py-4 fw-bold"><b>${item.precio}</b></p>
+            <div>
                 <ItemCount stockItems={item.stock} onAdd={onAdd} />
             </div>
         </div>

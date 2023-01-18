@@ -4,12 +4,16 @@ import {doc, getDoc, getFirestore} from "firebase/firestore"
 import { CartContext } from "./context/CartContext";
 
 const Ending = () => {
+    const {clear} = useContext(CartContext);
     const {id} =useParams();
     const [orden, setOrden] = useState({});  
     const [nombre, setNombre] = useState("");
     const [items, setItems] = useState([]);
-    const {clear} = useContext(CartContext);
-    clear();
+    useEffect(() => {
+        clear();
+    },[])
+    
+    
     useEffect(()=>{
         const db = getFirestore()
         const documento = doc(db, "orders", id)
@@ -22,7 +26,6 @@ const Ending = () => {
                 console.warn("Error, no se encontro la orden!!!");
             }
         })
-        
     },[id])
     
     return(
@@ -47,6 +50,7 @@ const Ending = () => {
                 <Link to={"/"} className="btn bgNegro fw-bold me-3">Volver al Inicio</Link>
                 <button className="btn bgNegro fw-bold ms-3" onClick={()=>{window.print()}}>Imprimir</button>
             </div>
+            
         </div>
     )
 

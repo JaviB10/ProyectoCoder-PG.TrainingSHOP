@@ -30,7 +30,7 @@ const ItemCount = ({stockItems, onAdd}) => {
     }
     
     return (
-        <div className="row d-flex justify-content-center">
+        <div className="row d-flex justify-content-center m-0">
             <div>
                 <div className="btn-group" role="group" aria-label="Basic outlined example">
                     <button className="btn bgNegro fw-bold" type="button" onClick={decrementarStock}> - </button>
