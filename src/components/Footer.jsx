@@ -11,9 +11,9 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div className="col-12 col-md-6 redesSociales row d-flex justify-content-center align-items-center">
-                    <Link className="instagram" href="https://www.instagram.com/pg.training/?hl=es" target={"_blank"}><i className="fab fa-instagram" ></i> </Link>
-                    <Link className="facebook" href="https://www.facebook.com/PG-training-100650208793813/?ref=py_c&_rdr" target={"_blank"}><i className="fab fa-facebook-f"></i></Link>
-                    <Link className="whatsapp" href="https://api.whatsapp.com/send?phone=543415319116&app=facebook&entry_point=page_cta&fbclid=IwAR3eNcDfa0ZwRZnUkdUvm-yLo2_o_L9Q40bakhukY8_D2JMdQTxLzYb4GkI" target={"_blank"}><i className="fab fa-whatsapp"></i></Link>
+                    <a className="instagram" href="https://www.instagram.com/pg.training/?hl=es" target={"blank"}><i className="fab fa-instagram" ></i> </a>
+                    <a className="facebook" href="https://www.facebook.com/PG-training-100650208793813/?ref=py_c&_rdr" target={"blank"}><i className="fab fa-facebook-f"></i></a>
+                    <a className="whatsapp" href="https://api.whatsapp.com/send?phone=543415319116&app=facebook&entry_point=page_cta&fbclid=IwAR3eNcDfa0ZwRZnUkdUvm-yLo2_o_L9Q40bakhukY8_D2JMdQTxLzYb4GkI" target={"blank"}><i className="fab fa-whatsapp"></i></a>
                 </div>
                 <div className="col-12 mt-5">
                     <p className="text-center colorBlanco">&copy; 2022 PG Training SHOP - Todos los derechos reservados </p>

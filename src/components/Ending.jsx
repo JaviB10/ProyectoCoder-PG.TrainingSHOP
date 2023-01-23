@@ -9,10 +9,10 @@ const Ending = () => {
     const [orden, setOrden] = useState({});  
     const [nombre, setNombre] = useState("");
     const [items, setItems] = useState([]);
+
     useEffect(() => {
         clear();
-    },[])
-    
+    },[id])
     
     useEffect(()=>{
         const db = getFirestore()

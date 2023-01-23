@@ -45,12 +45,6 @@ header, a {
   height: 100px;
 }
 
-.efecto:hover{
-  transform: scale(1.03);
-  transition: 0.65s;
-  box-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 15px #fff;
-}
-
 .backgroundForm {
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
@@ -61,11 +55,6 @@ header, a {
   min-width: 90vw;
 }
 
-@media only screen and (max-width: 599px) {
-  .bgNombre {
-    height: auto;
-  }
-}
 
 .bgNegro {
   background-color: #000;
@@ -93,10 +82,6 @@ header, a {
   height: 100px;
 }
 
-
-
-
-
 .redesSociales a {
   width: 50px;
   height: 50px;
@@ -112,33 +97,46 @@ header, a {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 1024px) {
+  .efecto:hover{
+    transform: scale(1.03);
+    transition: 0.65s;
+    box-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 15px #fff;
+  }
 
-.redesSociales:hover a:hover i {
-  transition: all 0.65s;
-  transform: rotateY(360deg);
-}
-.instagram:hover {
-  background-color: rgb(255, 11, 182);
-  transform: translateY(-4.8px) scale(1.05);
-  color: #000;
+  .redesSociales:hover a:hover i {
+    transition: all 0.65s;
+    transform: rotateY(360deg);
+  }
+  .instagram:hover {
+    background-color: rgb(255, 11, 182);
+    transform: translateY(-4.8px) scale(1.05);
+    color: #000;
+  }
+  
+  .redesSociales:hover a:hover i {
+    transition: all 0.65s;
+    transform: rotateY(360deg);
+  }
+  .facebook:hover {
+    background-color: rgba(8, 63, 243);
+    transform: translateY(-4.8px) scale(1.05);
+    color: #000;
+  }
+  
+  .redesSociales:hover a:hover i {
+    transition: all 0.65s;
+    transform: rotateY(360deg);
+  }
+  .whatsapp:hover {
+    background-color: rgba(34, 119, 0);
+    transform: translateY(-4.8px) scale(1.05);
+    color: #000;
+  }
 }
 
-.redesSociales:hover a:hover i {
-  transition: all 0.65s;
-  transform: rotateY(360deg);
-}
-.facebook:hover {
-  background-color: rgba(8, 63, 243);
-  transform: translateY(-4.8px) scale(1.05);
-  color: #000;
-}
-
-.redesSociales:hover a:hover i {
-  transition: all 0.65s;
-  transform: rotateY(360deg);
-}
-.whatsapp:hover {
-  background-color: rgba(34, 119, 0);
-  transform: translateY(-4.8px) scale(1.05);
-  color: #000;
+@media only screen and (max-width: 599px) {
+  .bgNombre {
+    height: auto;
+  }
 }
